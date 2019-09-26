@@ -1,5 +1,5 @@
 <?php
-namespace Cqured\MediatR;
+namespace Spatial\MediatR;
 
 /**
  * Factory method used to resolve all services. For multiple instances, it will resolve against <see cref="IEnumerable{T}" />

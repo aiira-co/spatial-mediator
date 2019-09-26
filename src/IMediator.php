@@ -1,44 +1,46 @@
 <?php
 
-namespace Cqured\MediatR;
+namespace Spatial\MediatR;
+
+use Psr\Http\Server\MiddlewareInterface;
 
 /**
  * Defines a mediator to encapsulate request/response and publishing interaction patterns
-*/
-interface IMediator
+ */
+interface IMediator extends MiddlewareInterface
 {
-    
-    /**
-     * Asynchronously send a request to a single handler
-    *
-    * @param IRequest $request
-    * @param CancellationToken $cancellationToken
-    * @return void A task that represents the send operation. The task result contains the handler response
-    */
-    public function send(IRequest $request, CancellationToken $cancellationToken);
-
-
-    
-    
-    
 
     /**
-     * Asynchronously send a notification to multiple handlers
-    *
-    * @param object $notification
-    * @param CancellationToken $cancellationToken
-    * @return void A task that represents the publish operation
-    */
-    public function publish(object $notification, CancellationToken $cancellationToken = null);
+     * Process an incoming server request.
+     *
+     * Processes an incoming server request in order to produce a response.
+     * If unable to produce the response itself, it may delegate to the provided
+     * request handler to do so.
+     */
+    public function process(IRequest $request, IRequestHandler $handler): IResponse;
 
 
-    
-    /**
-     * Asynchronously send a notification to multiple handlers
-    *
-    * @param TNotification $notification
-    * @param CancellationToken $cancellationToken
-    * @return void A task that represents the publish operation
-    */
-    public function publish(TNotification $notification, CancellationToken $cancellationToken = null);
+
+
+
+
+    // /**
+    //  * Asynchronously send a notification to multiple handlers
+    //  *
+    //  * @param object $notification
+    //  * @param CancellationToken $cancellationToken
+    //  * @return void A task that represents the publish operation
+    //  */
+    // public function publish(object $notification, CancellationToken $cancellationToken = null);
+
+
+
+    // /**
+    //  * Asynchronously send a notification to multiple handlers
+    //  *
+    //  * @param TNotification $notification
+    //  * @param CancellationToken $cancellationToken
+    //  * @return void A task that represents the publish operation
+    //  */
+    // public function publish(TNotification $notification, CancellationToken $cancellationToken = null);
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Cqured\MediatR;
+namespace Spatial\MediatR;
 
 use Psr\Http\Server\RequestHandlerInterface;
 

@@ -1,5 +1,5 @@
 <?php
-namespace Cqured\MediatR;
+namespace Spatial\MediatR;
 
 /**
  * Marker interface to represent a notification

@@ -1,9 +1,9 @@
 <?php
-namespace Cqured\MediatR;
+namespace Spatial\MediatR;
 
 use Psr\Http\Message\ResponseInterface;
 
-class IResponse implements ResponseInterface
+interface IResponse extends ResponseInterface
 {
 
 }
