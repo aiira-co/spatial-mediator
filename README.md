@@ -2,9 +2,9 @@
 
 Simple PSR-7 PSR-15 http-server-middleware, unambitious mediator implementation in Spatial (PHP) Clean Architecture API.
 
-### Installing MediatR
+### Installing Mediator
 
-You should install [Mediator with Composer](https://www.nuget.org/packages/MediatR):
+You should install [Mediator with Composer](https://getcomposer.org):
 
     composer require spatial/mediator
 
