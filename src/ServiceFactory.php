@@ -1,13 +1,12 @@
 <?php
-namespace Spatial\MediatR;
+
+namespace Spatial\Mediator;
 
 /**
  * Factory method used to resolve all services. For multiple instances, it will resolve against <see cref="IEnumerable{T}" />
  */
 class ServiceFactory
-{
-
-};
+{ };
 
 class ServiceFactoryExtensions
 {
@@ -19,6 +18,5 @@ class ServiceFactoryExtensions
     public static function getInstances(ServiceFactory $factory)
     {
         return $factory;
-
     }
 }

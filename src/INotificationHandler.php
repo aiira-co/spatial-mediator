@@ -1,5 +1,5 @@
 <?php
-namespace Spatial\MediatR;
+namespace Spatial\Mediator;
 
  
     //  Defines a handler for a notification

@@ -1,5 +1,5 @@
 <?php
-namespace Spatial\MediatR;
+namespace Spatial\Mediator;
 
 use Psr\Http\Server\RequestHandlerInterface;
 
