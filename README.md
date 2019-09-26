@@ -27,7 +27,7 @@ require '/path/to/vendor/autoload.php';
 require 'vendor/autoload.php';
 
 use Core\Logic\Test\GetProduct;
-use Spatial\MediatR\Mediator;
+use Spatial\Mediator\Mediator;
 
 
 $mediator = new Mediator();

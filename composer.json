@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Spatial\\MediatR\\": "src/"
+      "Spatial\\Mediator\\": "src/"
     }
   },
   "autoload-dev": {
