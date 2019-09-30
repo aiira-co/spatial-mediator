@@ -2,13 +2,18 @@
 
 namespace Core\Logic\Test;
 
-use Spatial\MediatR\IRequest;
-use Spatial\MediatR\IRequestHandler;
-use Spatial\MediatR\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
+use Spatial\Psr7\Response;
 
-class GetProductHandler implements IRequestHandler
+class GetProductHandler implements RequestHandlerInterface
 {
-    public function handle(IRequest $request): Response
+    function __construct()
+    {
+        $this->response = new Response();
+    }
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         return new Response();
     }

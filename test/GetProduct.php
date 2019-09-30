@@ -2,7 +2,8 @@
 
 namespace Core\Logic\Test;
 
-use Spatial\MediatR\IRequest;
+use Psr\Http\Message\ServerRequestInterface;
+use Spatial\Psr7\Request;
 
-class GetProduct implements IRequest
+class GetProduct extends Request implements ServerRequestInterface
 { }

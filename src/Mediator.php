@@ -25,7 +25,7 @@ class Mediator implements MiddlewareInterface
 
         $handler = $handler ?? $this->_getHandlerName($request);
 
-        return $handler->handler($request);
+        return $handler->handle($request);
     }
 
 
@@ -35,7 +35,7 @@ class Mediator implements MiddlewareInterface
      * @param ServerRequestInterface $request
      * @return void
      */
-    private function _getHandlerName(IRequest $request): IRequestHandler
+    private function _getHandlerName(ServerRequestInterface $request): RequestHandlerInterface
     {
         $requestNamespace = explode('\\', get_class($request));
         if (count($requestNamespace) > 1) {
