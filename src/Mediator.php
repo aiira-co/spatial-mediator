@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Spatial\Mediator;
 
@@ -9,6 +10,14 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class Mediator implements MiddlewareInterface
 {
+//    /** @var ReopeningEntityManager */
+//    private $em;
+//
+//    public function __construct(ReopeningEntityManager $em)
+//    {
+//        $this->em = $em;
+//    }
+
 
     /**
      * Process an incoming server request.
@@ -16,15 +25,26 @@ class Mediator implements MiddlewareInterface
      * Processes an incoming server request in order to produce a response.
      * If unable to produce the response itself, it may delegate to the provided
      * request handler to do so.
+     * @param ServerRequestInterface $request
+     * @param RequestHandlerInterface|null $handler
+     * @return ResponseInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler = null): ResponseInterface
     {
-        if ($request == null) {
-            throw new ArgumentNullException(get_class($request));
-        }
-
+//        $this->em->open();
+//        try {
+//            if ($request == null) {
+//                throw new ArgumentNullException(get_class($request));
+//            }
+//
+//            $handler = $handler ?? $this->_getHandlerName($request);
+//
+//            return $handler->handle($request);
+//        } finally {
+//            $this->em->getConnection()->close();
+//            $this->em->clear();
+//        }
         $handler = $handler ?? $this->_getHandlerName($request);
-
         return $handler->handle($request);
     }
 
@@ -33,7 +53,7 @@ class Mediator implements MiddlewareInterface
      * Generate Hanlder name from request name
      *
      * @param ServerRequestInterface $request
-     * @return void
+     * @return RequestHandlerInterface
      */
     private function _getHandlerName(ServerRequestInterface $request): RequestHandlerInterface
     {
