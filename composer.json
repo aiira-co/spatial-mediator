@@ -24,7 +24,7 @@
   "require": {
     "php": "^7.4",
     "psr/http-server-middleware": "^1.0",
-    "spatial/psr7": "^1.0"
+    "spatial/psr7": "dev-master"
   },
   "autoload": {
     "psr-4": {
