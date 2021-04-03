@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da5639e5-6d43-4bae-931e-775a9e433afc" name="Default Changelist" comment="php 8 required">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -62,7 +63,8 @@
       <workItem from="1612639926578" duration="260000" />
       <workItem from="1616031954319" duration="15000" />
       <workItem from="1616032035432" duration="25000" />
-      <workItem from="1616151922512" duration="73000" />
+      <workItem from="1616151922512" duration="105000" />
+      <workItem from="1616678784327" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="php 8 required">
       <created>1610708107779</created>
