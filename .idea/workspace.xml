@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da5639e5-6d43-4bae-931e-775a9e433afc" name="Default Changelist" comment="php 8 required">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spatial-mediator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spatial-mediator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mediator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mediator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.google.cloudcode.ide_session_index" value="20220115_0000" />
+    <property name="com.google.cloudcode.ide_session_index" value="20220115_0001" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../spatial-psr7" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -88,7 +85,7 @@
       <workItem from="1616678784327" duration="12000" />
       <workItem from="1617453539427" duration="97000" />
       <workItem from="1641316533567" duration="1474000" />
-      <workItem from="1642276827664" duration="53000" />
+      <workItem from="1642276827664" duration="186000" />
     </task>
     <task id="LOCAL-00001" summary="php 8 required">
       <created>1610708107779</created>
