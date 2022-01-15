@@ -1,21 +1,20 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Spatial\Mediator;
 
-use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+//use Spatial\Entity\ReopeningEntityManager;
 
 class Mediator implements MiddlewareInterface
 {
-//    /** @var ReopeningEntityManager */
-//    private $em;
-//
-//    public function __construct(ReopeningEntityManager $em)
+
+//    public function __construct(private ReopeningEntityManager $em)
 //    {
-//        $this->em = $em;
 //    }
 
 
@@ -33,24 +32,18 @@ class Mediator implements MiddlewareInterface
     {
 //        $this->em->open();
 //        try {
-//            if ($request == null) {
-//                throw new ArgumentNullException(get_class($request));
-//            }
-//
-//            $handler = $handler ?? $this->_getHandlerName($request);
-//
-//            return $handler->handle($request);
+            $handler = $handler ?? $this->_getHandlerName($request);
+
+            return $handler->handle($request);
 //        } finally {
 //            $this->em->getConnection()->close();
 //            $this->em->clear();
 //        }
-        $handler = $handler ?? $this->_getHandlerName($request);
-        return $handler->handle($request);
     }
 
 
     /**
-     * Generate Hanlder name from request name
+     * Generate Handler name from request name
      *
      * @param ServerRequestInterface $request
      * @return RequestHandlerInterface
