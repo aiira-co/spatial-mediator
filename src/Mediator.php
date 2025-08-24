@@ -8,6 +8,8 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use Spatial\Core\App;
+
 //use Spatial\Entity\ReopeningEntityManager;
 
 class Mediator implements MiddlewareInterface
@@ -30,15 +32,12 @@ class Mediator implements MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler = null): ResponseInterface
     {
-//        $this->em->open();
-//        try {
-            $handler = $handler ?? $this->_getHandlerName($request);
+       
 
-            return $handler->handle($request);
-//        } finally {
-//            $this->em->getConnection()->close();
-//            $this->em->clear();
-//        }
+            $handler = $handler ?? $this->_getHandlerName($request);
+            $response =  $handler->handle($request);
+            return $response;
+        
     }
 
 
@@ -58,6 +57,6 @@ class Mediator implements MiddlewareInterface
         }
         $handlerName = $modelName . 'Handler';
         $handler = \str_replace($modelName, $handlerName, get_class($request));
-        return new $handler();
+        return  App::$diContainer->get($handler);
     }
 }
