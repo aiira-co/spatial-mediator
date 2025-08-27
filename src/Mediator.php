@@ -30,7 +30,7 @@ class Mediator implements MiddlewareInterface
      * @param RequestHandlerInterface|null $handler
      * @return ResponseInterface
      */
-    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler = null): ResponseInterface
+    public function process(ServerRequestInterface $request, RequestHandlerInterface|null $handler = null): ResponseInterface
     {
        
 
