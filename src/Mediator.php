@@ -84,7 +84,7 @@ class Mediator implements MiddlewareInterface
 
             return $handlerRequest;
         } catch (\Exception $e) {
-            var_dump($e->getMessage());
+            error_log('[Spatial\\Mediator] Error cloning request: ' . $e->getMessage());
         }
     }
 

@@ -1,6 +1,6 @@
 {
   "name": "spatial/mediator",
-  "version": "4.0.0-RC3.0",
+  "version": "4.0.0-RC3.1",
   "description": "Simple PSR-7 PSR-15 http-server-middleware, unambitious mediator implementation in Spatial (PHP) Clean Architecture API",
   "keywords": [
     "middleware",
